@@ -1,6 +1,6 @@
 # 前端web app开发面试题
 
-我们希望你能独立地在3小时内完成题目任务。结束后给 hr@simplylab.xyz 发送题目的解答，邮件主题请用如下的命名规则：**投递的简历平台+面试岗位+姓名+微信+电话**。
+我们希望你能独立地在1.5小时内完成题目任务。结束后给 hr@simplylab.xyz 发送题目的解答，邮件主题请用如下的命名规则：**投递的简历平台+面试岗位+姓名+微信+电话**。
 
 完成题目的过程中请注意代码、命名规范以及合理的代码注释。
 
@@ -33,9 +33,9 @@
 
 ## 题目内容具体要求说明
 
-需要搭建的web app一共有两个页面（首页、搜索页），包含三种不同的状态：
+需要搭建的web app一共有两个页面：
 - (A) 首页
-- (B) 搜索页：loading状态、结果显示
+- (B) 搜索页
 
 其中以下的每个页面顶部都有一个导航栏，位置一直在网页最顶端，不随页面其他内容部分滑动。最左端显示一个网页Logo，名字为BestSearch，其中Best部分字体是加粗的。在任何一个网页点击这个BestSearch都会回到首页。
 
@@ -49,16 +49,11 @@
 http://localhost:3000/
 
 ###### 功能描述：
-首页，一共包含有两个部分：
-
-1. 一条"Search Trends"的标语，在页面水平居中的位置；
-2. 一个搜索框，搜索框的placeholder为“Search for new products in 961K stores”，搜索框右方有一个搜索按钮。
-
 用户可以通过（1）按回车键或者（2）点击右方搜索按钮这两种不同的方式触发搜索功能，从而跳转至搜索页 http://localhost:3000/search/{keyword} 进行搜索并显示搜索结果。
 
 ###### UI如下图所示：
 
-![home page](https://preinterview.s3.us-west-2.amazonaws.com/Lark20210825-170437.png?raw=true)
+![home page](https://preinterview.s3.us-west-2.amazonaws.com/preinterview-frontend-1.png?raw=true)
 
 
 #### (B) 搜索页
@@ -68,14 +63,14 @@ http://localhost:3000/search/{keyword}
 
 其中`{keyword}`是当前用户用来搜索的搜索词。
 
-比如用户希望搜索`Hat`这个词，那么当前的路径应该为 http://localhost:3000/search/Hat
-
 请注意，路径中的`{keyword}`如果包含空格符号，需要转化为 `+` 显示在路径中。
 
 比如如果用户希望搜索`Best cat toys`这个词，那么路径应为 http://localhost:3000/search/Best+cat+toys
 
 ###### 功能描述：
-在搜索页的导航栏中，除了“BestSearch”的Logo以外，导航栏的水平居中位置会显示一个搜索框，搜索框中会显示目前正在搜索的关键词。
+在搜索页的导航栏中的搜索框里会显示目前正在搜索的关键词。
+
+在前端网页调用API得到搜索结果之前，显示loading状态。
 
 当前端网页得到后台返回的结果之后，会将搜索结果展现在此搜索页上。
 
@@ -83,10 +78,7 @@ http://localhost:3000/search/{keyword}
 - 标题：Related product trends
 - 用responsive layout grid显示后台返回的结果列表
 
-用户可以通过三种不同的方式进入这个搜索页面进行搜索：
-1. 在首页中输入搜索词，点击回车键（或者右方搜索按钮），会跳转至此搜索页面进行搜索；
-2. 已经在搜索页的时候，在搜索框里输入一个与当前不同的搜索词，点击回车键（或者搜索按钮），会进行对于新搜索词的搜索；
-3. 在浏览器中直接输入一个带有搜索词的搜索页URL。比如用户直接在浏览器的地址栏输入 http://localhost:3000/search/Hat ，就可以进入此搜索页面搜索Hat相关的内容并最终看到搜索结果。
+请周全考虑各种不同的进入此页面的情形，并自行做出适当处理。
 
 ###### loading状态UI如下图所示：
 
