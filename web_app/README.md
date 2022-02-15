@@ -92,7 +92,7 @@ http://localhost:3000/search/{keyword}
 
 如上图所示，本题需要制作一个web app来完成一个简单的搜索动作。页面需要美观、流畅。
 
-- 调用接口：API: http://3.141.23.218:5000/interview/keyword_search
+- 请调用此接口来获取搜索结果：API: http://3.141.23.218:5000/interview/keyword_search
   
   Parameters（输入参数）: 
 ```
