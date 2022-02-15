@@ -105,8 +105,7 @@ http://localhost:3000/search/{keyword}
 其中`search_phrase`的值是用户输入的搜索keyword（string），比如"hat"、"best shoes"等。
 - 调用方法：POST
 - 参数格式：JSON
-
-输出：为JSON格式的数据，具体需要用到的JSON中的fields如下例所示：
+- 上述API的返回值为JSON格式的数据，格式如下：
 
 ```
 {
@@ -128,5 +127,5 @@ http://localhost:3000/search/{keyword}
 ```
 
 其中:
-- `product_trends`是你需要使用的数据（对应的是搜索结果里的Related product trends面积图，date对应横轴，sv对应纵轴）；
+- 完成此题目将会需要用到API返回的JSON中的`product_trends`（对应的是搜索结果里的Related product trends面积图，date对应横轴，sv对应纵轴）；
 - 返回的结果中还会包含`product_launch_data`和`products`，请忽略这两项数据。
