@@ -76,7 +76,7 @@ http://localhost:3000/search/{keyword}
 
 搜索结果内容：
 - 标题：Related product trends
-- 用responsive layout grid显示后台返回的结果列表
+- 搜索结果：用responsive layout grid显示后台返回的结果列表
 
 请周全考虑各种不同的进入此页面的情形，并自行做出适当处理。
 
