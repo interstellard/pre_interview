@@ -15,7 +15,8 @@ SimplyLab的精英技术团队由来自于斯坦福大学、清华大学、Googl
   * UI设计
     * [前端设计](https://github.com/interstellard/pre_interview/tree/main/ux)
   * 前端开发
-    * [前端开发](https://github.com/interstellard/pre_interview/tree/main/web_app)
+    * [前端开发 React](https://github.com/interstellard/pre_interview/tree/main/react)
+    * [前端开发 Vue](https://github.com/interstellard/pre_interview/tree/main/vue)
   * 后端及爬虫开发
     * [后端及爬虫]
       -> [后端题目](https://github.com/interstellard/pre_interview/blob/main/backend/README_BACKEND.md)
